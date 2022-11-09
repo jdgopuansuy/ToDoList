@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Pacifico';
+    src: url(fonts/Pacifico-Regular.ttf);
+}
+@font-face {
+    font-family: 'LobsterTwo';
+    src: url(fonts/LobsterTwo-Regular.ttf);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(195, 105, 200);
+
+}
+.container {
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 0 15px 15px 15px;
+    color: rgb(162, 4, 167);
+    background-color: rgb(255, 255, 190);
+    font-family: 'Pacifico';
+    text-align: center;
+}
