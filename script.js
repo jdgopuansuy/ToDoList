@@ -88,6 +88,8 @@ function addTask() {
     }
     function delValue() {
         this.parentNode.remove();
+        addTaskBtn.removeAttribute("disabled", "");
+        taskInputValue.removeAttribute("disabled", "");
     }
     if (taskList.childElementCount >= 6) {
         //disable add button
@@ -95,5 +97,9 @@ function addTask() {
         taskInputValue.setAttribute("disabled", "");
 
         alert("Finish a task first! You can only add 5 task on this list.")
+    }
+    else {
+        addTaskBtn.removeAttribute("disabled", "");
+        taskInputValue.removeAttribute("disabled", "");
     }
 }
