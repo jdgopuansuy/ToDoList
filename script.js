@@ -36,6 +36,14 @@ function addTask() {
     taskItem.appendChild(editBtn);
     taskItem.appendChild(delBtn);
 
+    if (taskList.childElementCount >= 6) {
+        //disable add button
+        addTaskBtn.setAttribute("disabled", "");
+        taskInputValue.setAttribute("disabled", "");
+
+        alert("Finish a task first! You can only add 5 task on this list.")
+    }
+
     function editValue() {
         // attribute
         taskInputValue.removeAttribute("disabled", "");
@@ -82,23 +90,13 @@ function addTask() {
                 taskItem.removeChild(saveBtn);
 
                 taskInputValue.value = taskInputValue.defaultValue;
+
+                alert(text);
             }
-            alert(text);
         }
     }
     function delValue() {
         this.parentNode.remove();
-        addTaskBtn.removeAttribute("disabled", "");
-        taskInputValue.removeAttribute("disabled", "");
-    }
-    if (taskList.childElementCount >= 6) {
-        //disable add button
-        addTaskBtn.setAttribute("disabled", "");
-        taskInputValue.setAttribute("disabled", "");
-
-        alert("Finish a task first! You can only add 5 task on this list.")
-    }
-    else {
         addTaskBtn.removeAttribute("disabled", "");
         taskInputValue.removeAttribute("disabled", "");
     }
