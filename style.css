@@ -6,7 +6,10 @@
     font-family: 'LobsterTwo';
     src: url(fonts/LobsterTwo-Regular.ttf);
 }
-
+@font-face {
+    font-family: 'dancingScript';
+    src: url(fonts/DancingScript-VariableFont_wght.ttf);
+}
 body {
     display: flex;
     flex-direction: column;
@@ -17,11 +20,62 @@ body {
 
 }
 .container {
-    border: 3px solid rgb(255, 255, 255);
+    border: 10px solid rgb(151, 153, 56);
     border-radius: 10px;
     padding: 0 15px 15px 15px;
     color: rgb(162, 4, 167);
     background-color: rgb(255, 255, 190);
     font-family: 'Pacifico';
     text-align: center;
+    width: 350px;
+}
+
+.container .newTask {
+    /* border: 3px solid rgb(195, 201, 24); */
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(160, 250, 148);
+}
+
+.newTask input {
+    border-radius: 10px;
+    border: 2px solid white;
+    height: 20px;
+    width: 200px;
+    font-family: 'dancingScript';
+}
+.newTask input:hover {
+    border: 2px solid rgb(162, 4, 167);
+}
+button {
+    font-family: lobsterTwo;
+    font-size: large;
+    background-color: rgb(162, 4, 167);
+    color: white;
+    border: 3px solid rgb(162, 4, 167);
+    border-radius: 20px;
+}
+
+button:hover {
+    color: rgb(162, 4, 167);
+    background-color: white;
+    border: 3px solid white;
+}
+#taskList {
+    border: 3px solid rgb(151, 153, 56);
+    border-radius: 10px;
+    padding:25px;
+    height: 180px;
+}
+#taskList input {
+    font-family: 'dancingScript';
+    font-size: 18px;
+}
+.taskItem {
+    display: flex;
+    justify-content:space-around ;
+    margin: 5px;
+}
+.delBtn {
+    background-color: rgb(109, 5, 5);
 }

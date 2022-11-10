@@ -13,6 +13,8 @@ function addTask() {
 
     //create child nodes
     let taskItem = document.createElement("div");
+    taskItem.classList ="taskItem";
+
     let taskInputValue = document.createElement("input");
     taskInputValue.type = "text";
     taskInputValue.setAttribute("disabled", "");
@@ -36,7 +38,7 @@ function addTask() {
     taskItem.appendChild(editBtn);
     taskItem.appendChild(delBtn);
 
-    if (taskList.childElementCount >= 6) {
+    if (taskList.childElementCount >= 5) {
         //disable add button
         addTaskBtn.setAttribute("disabled", "");
         taskInputValue.setAttribute("disabled", "");
